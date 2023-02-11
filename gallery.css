@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Serif', serif;
+    color:white;
+    background: black;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    /* background: rgb(88,160,8); */
+    /* background: linear-gradient(90deg, rgba(88,160,8,1) 0%, rgba(9,82,31,1) 100%, rgba(3,17,173,1) 100%); */
+}
+
+.gallery{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 80px; 
+}
+.box a{
+    text-decoration: none;
+    color: white !important;
+    cursor: pointer;
+    font-size: 1.3rem;
+
+}
+
+.box{
+    background-size: cover;
+    background-position: top;
+    color:white;
+    text-shadow: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#222;
+    background-blend-mode: hard-light;
+    transition: all 0.5s ease-in-out;
+}
+.box:hover{
+    background-color:darkslateblue;
+    background-position: center;
+    box-shadow: 0 0 4px white;
+}
+#B1{
+    grid-row: span 4;
+}
+
+#B2{
+    grid-row: span 4;
+    grid-column: span 2;
+}
+#B3{
+    grid-row: span 4;
+    grid-column: span 2;
+}
+#B4{
+    grid-row: span 4;
+}
+#B5{
+    grid-row: span 4;
+}
+#B6{
+    grid-row: span 4;
+    grid-column: span 2;
+}
+
+@media (max-width : 1024px) {
+    .box{
+        background-size: cover;
+        background-position: top;
+        color:white;
+        text-shadow: #222;
+        display: flex;
+        background-color:#222;
+        background-blend-mode: hard-light;
+        transition: all 0.5s ease-in-out;
+    }
+    .box:hover{
+        background-color:darkslateblue;
+        background-position: center;
+        box-shadow: 0 0 4px white;
+    }
+    
+    .container{
+        flex-direction: column;
+        padding-block: 20px;
+        gap: 40px;
+    }
+    .gallery{
+        width: 75%;
+        padding-inline: 12px;;
+    }
+    /* .box{
+        grid-auto-rows: span 1;
+        grid-column: span 4;
+    } */
+
+    #B1{
+        grid-row: span 2;
+        grid-column: span 4;
+    }
+    
+    #B2{
+        grid-row: span 2;
+        grid-column: span 4;
+    }
+    #B3{
+        grid-row: span 2;
+        grid-column: span 4;
+    }
+    #B4{
+        grid-row: span 2;
+        grid-column: span 4;
+    }
+    #B5{
+        grid-row: span 2;
+        grid-column: span 4;
+    }
+    #B6{
+        grid-row: span 2;
+        grid-column: span 4;
+    }
+}
